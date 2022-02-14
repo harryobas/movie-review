@@ -1,0 +1,41 @@
+
+<div class="container">
+<h2>Movies</h2>
+<table class="table">
+<thead>
+<tr>
+<th>Movie</th>
+<th>Description</th>
+<th>Year</th>
+<th>Director</th>
+<th>Actor</th>
+<th>Filming location</th>
+<th>Country</th>
+<th>Average rating</th>
+</tr>
+</thead>
+
+<tbody>
+
+<% movies.each do |movie| %>
+<tr>
+<td><%= movie.movie %></td>
+<td><%= movie.description %></td>
+<td><%= movie.year %></td>
+<td><%= movie.director %></td>
+<td><%= movie.actor %></td>
+<td><%= movie.filming_location %></td>
+<td><%= movie.country %></td>
+<td><%= movie.average_rating%></td>
+</tr>
+<%end%>
+</tbody>
+</table>
+<div class="container">
+<%= form_tag sort_movies_path, method: :get, class: 'form-group' do %>
+<p>
+<%= submit_tag "sort", name: nil, class: 'btm btn-lg btn-primary' %>
+</p>
+<%end%>
+</div>
+</div>
