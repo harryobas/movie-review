@@ -11,7 +11,7 @@ class Movie < ApplicationRecord
     end
 
     def self.search(query)
-        result = where(actor: query)
+         where(actor: query)
     end
 
 end

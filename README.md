@@ -1,24 +1,30 @@
-# README
+# Introduction
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A tiny Ruby on Rails application that manages movies and their reviews providing the following features:
 
-Things you may want to cover:
+1. Import movies and reviews data from csv files
 
-* Ruby version
+2. Show overview of movies
 
-* System dependencies
+3. search for a movie actor
 
-* Configuration
+4. Sort movies overview
 
-* Database creation
+# Requirements
 
-* Database initialization
+1. Ruby 2.6.6
 
-* How to run the test suite
+2. Rails 5.2.6
 
-* Services (job queues, cache servers, search engines, etc.)
+# How to run
 
-* Deployment instructions
+## Docker
 
-* ...
+This app is dockerized to enable both ease of installation and execution on either Linux, mac or windows. To install/run on Linux, make sure to have both docker and docker-compose installed on your machine and follow the instructions below:
+
+1. $ git clone https://github.com/harryobas/movie-review.git
+2. $ cd movie-review
+3. $ sudo docker-compose build
+4. $ sudo docker-compose up -d
+5. $ sudo docker-compose exec web rails db-migrate
+6. $ sudo docker-compose exec web rake import:import_csv 
