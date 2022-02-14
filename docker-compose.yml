@@ -12,6 +12,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: pa$$word
       POSTGRES_DB: movie_review_dev
+      ELASTIC_HOST: "elasticsearch"
     volumes:
       - .:/usr/src/app
 
@@ -22,8 +23,8 @@ services:
         POSTGRES_PASSWORD: pa$$word
         POSTGRES_DB: movie_review_dev
       volumes:
-        - db-data:/data/db
-
+  
+       - db-data:/data/db
 
 volumes:
   db-data:

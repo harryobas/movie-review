@@ -1,0 +1,16 @@
+
+<%if @movies.empty?%>
+<div class="container">
+<h2>No Results Found</h2>
+</div>
+<%end%>
+
+<div class="row">
+<% @movies.each do |movie| %>
+<div class="col-sm-6 col-md-3">
+<div class="container">
+<%= link_to movie.actor, movie_path(movie.id) %>
+</div>
+</div>
+<%end%>
+</div>

@@ -1,0 +1,10 @@
+<nav class="navbar navbar-default" role="navigation">
+<div class="container">
+<%= form_tag search_movies_path, method: :get, class: 'navbar-form navbar-right', role: 'search' do %>
+<p>
+<%= text_field_tag :search, params[:search], class: "form-control", placeholder: 'search' %>
+<%= submit_tag "search", name: nil, class: 'btm btn-default' %>
+</p>
+<% end %>
+</div>
+</nav>
