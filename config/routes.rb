@@ -6,5 +6,7 @@ Rails.application.routes.draw do
             get 'sort'
         end
     end
+
+    root to: "movies#index"
   
 end

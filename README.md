@@ -16,6 +16,8 @@ A tiny Ruby on Rails application that manages movies and their reviews providing
 
 2. Rails 5.2.6
 
+3. postgresql
+
 # How to run
 
 ## Docker
@@ -27,4 +29,6 @@ This app is dockerized to enable both ease of installation and execution on eith
 3. $ sudo docker-compose build
 4. $ sudo docker-compose up -d
 5. $ sudo docker-compose exec web rails db-migrate
-6. $ sudo docker-compose exec web rake import:import_csv 
+6. $ sudo docker-compose exec web rake import:import_csv
+
+
